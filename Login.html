@@ -3,14 +3,14 @@
 </script>
 </head>
 <body>
-<form id = "logIn" name = "logIn">
+<form id = "logIn" name = "logIn" onsubmit = "return signIn()" action = "Feed.html">
 <h3>My Book</h3>
 <br>
 User Name: <input type = "text" id = "userName" name = "userName" value = "" onkeyup = "validateUsername()"></input>
 <br>
 Password: <input type = "password" id = "password" name = "password" value = ""></input>
+<input type = "submit" id = "logInToApp" name = "logInToApp" value = "Sign In"></input>
 </form>
-<input type = "submit" id = "signIn" name = "signIn" value = "Sign In" onclick = "signIn()"></input>
 <script src = "Login.js"></script>
 </body>
 </html>

@@ -6,15 +6,15 @@ function signIn()
 		var isValidUser = validateUser();
 		if(isValidUser)
 		{
-			//window.location = ""; redirect him to next page
-			console.log("Valid User...");
+			return true;
 		}
 		else
 		{
-			alert("Please enter a valid username and password")
+			alert("Please enter a valid username and password");
+			return false;
 		}
 	}
-};
+}
 
 function validateUsername()
 {
