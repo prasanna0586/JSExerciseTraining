@@ -1,18 +1,20 @@
-var validUsers = [["prasanna","1234"],["lakshmi","1234"],["rvignesh","1234"]], formObj = document.logIn;
+var validUsers = [["prasanna","123456"],["lakshmi","123456"],["rvignesh","123456"]], formObj = document.logIn;
 function signIn()
 {
-	//validatePassword();
-	var isValidUser = validateUser();
-	if(isValidUser)
+	if(validatePassword())
 	{
-		//window.location = ""; redirect him to next page
-		console.log("Valid User...");
+		var isValidUser = validateUser();
+		if(isValidUser)
+		{
+			//window.location = ""; redirect him to next page
+			console.log("Valid User...");
+		}
+		else
+		{
+			alert("Please enter a valid username and password")
+		}
 	}
-	else
-	{
-		alert("Please enter a valid username and password")
-	}
-}
+};
 
 function validateUsername()
 {
@@ -41,4 +43,16 @@ function validateUser()
 		}
 	}
 	return validUser;
+}
+
+function validatePassword()
+{
+	var isValidPassword = true;
+	if(formObj.password.value.length < 6)
+	{
+		alert("Password cannot be less than 6 characters.");
+		formObj.password.value = "";
+		isValidPassword = false;
+	}
+	return isValidPassword;
 }
