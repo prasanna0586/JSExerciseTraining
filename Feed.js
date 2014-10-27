@@ -1,8 +1,9 @@
-var feedArray = ['Existing Text Feed','Existing URL Feed'];
+var feedArray = ['Appa','Amma'];
 
 function postData()
 {
 	feedArray.push(enterFeed.value);
+	console.log("feedArray beginning " + feedArray);
 	var table = document.getElementById("feedContent");
 	var feedRow,iconCell,feedCell,closeCell,imageElement;
 	var clearedTable = clearFeedData(table);
@@ -42,6 +43,7 @@ function postData()
 			{
 				if(clearedTable.rows[i].cells[2].id === this.id)
 				{
+					feedArray.splice((feedArray.length - 1) - clearedTable.rows[i].rowIndex,1);
 					clearedTable.deleteRow(clearedTable.rows[i].rowIndex);
 				}
 			}
