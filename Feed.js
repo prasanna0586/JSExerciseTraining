@@ -1,4 +1,4 @@
-var feedArray = ['Appa','Amma'];
+var feedArray = ['Existing Text Feed','Existing URL Feed'];
 
 function postData()
 {
@@ -40,6 +40,7 @@ function postData()
 		}
 	}
 }
+
 function clearFeedData(feedContentsTable)
 {
 	while(feedContentsTable.rows.length)
