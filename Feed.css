@@ -6,7 +6,7 @@ font-size:14px;
 width:100px;
 }
 
-.oddrowcolor
+.textrowcolor
 {
 	background-color:#E3F4F4;
 	text-align: right;
@@ -17,7 +17,7 @@ width:100px;
 	font-size:13px;
 	
 }
-.evenrowcolor{
+.urlrowcolor{
 	background-color: #FFFFD8;
 	text-align: right;
 	width: 700px;

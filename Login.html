@@ -1,16 +1,28 @@
 <html>
-<head>
-</script>
-</head>
+<head></head>
 <body>
+<table id = "header" name = "header" width = "1330px" bgcolor = "#ADD8E6">
+<tr align = "center"><td><h4>My Book<h4></td></tr>
+</table>
 <form id = "logIn" name = "logIn" onsubmit = "return signIn()" action = "FeedAndProfile.html">
-<h3>My Book</h3>
-<br>
-User Name: <input type = "text" id = "userName" name = "userName" value = "" onkeyup = "validateUsername()"></input>
-<br>
-Password: <input type = "password" id = "password" name = "password" value = ""></input>
-<input type = "submit" id = "logInToApp" name = "logInToApp" value = "Sign In"></input>
+<table>
+<tr>
+<td>User Name</td><td><input type = "text" id = "userName" name = "userName" value = "" onkeyup = "validateUsername()"></input></td>
+</tr>
+<tr>
+<td>Password</td><td><input type = "password" id = "password" name = "password" value = ""></input></td>
+</tr>
+<tr align = "center">
+<td><input type = "submit" id = "logInToApp" name = "logInToApp" value = "Sign In"></input></td>
+</tr>
+</table>
 </form>
+<img id = "loginPageImage" name = "loginPageImage" src = "Javascript.png"></img>
+<table id = "footer" name = "footer" width = "1330px" bgcolor = "#ADD8E6">
+<tr><td>
+<h4 align = "center">Talent improving exercise, OFS</h4>
+</td></tr>
+</table>
 <script src = "Login.js"></script>
 </body>
 </html>
