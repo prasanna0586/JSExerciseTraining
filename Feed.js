@@ -1,6 +1,6 @@
 var feedArray = ['Appa','Amma'];
 var table = document.getElementById("feedContent");
-var feedRow,iconCell,feedCell,closeCell,imageElement;
+var feedRow,iconCell,feedCell,closeCell,imageElement,anchorElement;
 
 document.onLoad = function()
 {
@@ -40,11 +40,24 @@ function initializeTable()
 		imageElement.setAttribute("src", "UserIcon.png");
 		iconCell.appendChild(imageElement);
 		//Create icon image cell ends
-		
+		var regExForURL=/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
 		//Create feed cell starts
 		feedCell = feedRow.insertCell(1);
 		feedCell.id = "feedCell" + (rowNum + 1);
-		feedCell.innerHTML = feedArray[rowNum];
+		
+		if(regExForURL.test(feedArray[rowNum]))
+		{
+			anchorElement = document.createElement("a");
+			anchoreTextNode = document.createTextNode(feedArray[rowNum]);
+			anchorElement.setAttribute("href",feedArray[rowNum]);
+			anchorElement.setAttribute("target","_blank");
+			anchorElement.appendChild(anchoreTextNode);
+			feedCell.appendChild(anchorElement);
+		}
+		else
+		{
+			feedCell.innerHTML = feedArray[rowNum];
+		}
 		//Create feed cell ends
 		
 		//Create date cell starts
