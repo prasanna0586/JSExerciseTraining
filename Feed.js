@@ -53,12 +53,12 @@ function initializeTable()
 			anchorElement.setAttribute("target","_blank");
 			anchorElement.appendChild(anchoreTextNode);
 			feedCell.appendChild(anchorElement);
-			feedRow.className="oddrowcolor";
+			feedRow.className="urlrowcolor";
 		}
 		else
 		{
 			feedCell.innerHTML = feedArray[rowNum];
-			feedRow.className="evenrowcolor"
+			feedRow.className="textrowcolor";
 		}
 		//Create feed cell ends
 		

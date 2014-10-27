@@ -41,4 +41,5 @@ font-size: 14;
 #feedContent
 {
 border-collapse:collapse;
+width: 600px;
 }
